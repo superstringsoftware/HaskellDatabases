@@ -1,6 +1,6 @@
 module Main where
 
-import Lib
+import Muon.Data.Column
 
 main :: IO ()
-main = someFunc
+main = putStrLn "This is the db" >> prettyPrintCT ctable

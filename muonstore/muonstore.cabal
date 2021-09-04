@@ -9,9 +9,9 @@ version:        0.1.0.0
 description:    Please see the README on GitHub at <https://github.com/githubuser/muonstore#readme>
 homepage:       https://github.com/githubuser/muonstore#readme
 bug-reports:    https://github.com/githubuser/muonstore/issues
-author:         Author name here
-maintainer:     example@example.com
-copyright:      2021 Author name here
+author:         Anton Antich
+maintainer:     aantich@gmail.com
+copyright:      2021 Anton Antich
 license:        BSD3
 license-file:   LICENSE
 build-type:     Simple
@@ -26,12 +26,17 @@ source-repository head
 library
   exposed-modules:
       Lib
+      Muon.Data.Column
   other-modules:
       Paths_muonstore
   hs-source-dirs:
       src
   build-depends:
       base >=4.7 && <5
+    , binary
+    , text
+    , vector
+    , vector-binary-instances
   default-language: Haskell2010
 
 executable muonstore-exe
@@ -43,7 +48,11 @@ executable muonstore-exe
   ghc-options: -threaded -rtsopts -with-rtsopts=-N
   build-depends:
       base >=4.7 && <5
+    , binary
     , muonstore
+    , text
+    , vector
+    , vector-binary-instances
   default-language: Haskell2010
 
 test-suite muonstore-test
@@ -56,5 +65,9 @@ test-suite muonstore-test
   ghc-options: -threaded -rtsopts -with-rtsopts=-N
   build-depends:
       base >=4.7 && <5
+    , binary
     , muonstore
+    , text
+    , vector
+    , vector-binary-instances
   default-language: Haskell2010
